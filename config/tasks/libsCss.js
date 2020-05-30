@@ -21,7 +21,7 @@ export default function () {
       .pipe(gif(!liveEnv, sourcemaps.init()))
       .pipe(sass({outputStyle: 'compressed'}))
       .pipe(autoprefixer({
-          browsers: autoprefixerSettings
+          overrideBrowserslist: autoprefixerSettings
         })
       )
       .pipe(concat(cssLibFileName))
